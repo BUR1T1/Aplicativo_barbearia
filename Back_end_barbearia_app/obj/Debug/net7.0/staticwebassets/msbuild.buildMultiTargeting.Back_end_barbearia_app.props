@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Back_end_barbearia_app.props" />
+</Project>
