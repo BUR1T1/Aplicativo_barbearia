@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\OTAVIOCAETANORIBEIRO\\Back_end_barbearia_app\\Back_end_barbearia_app.csproj": {}
+    "C:\\Users\\OTAVIOCAETANORIBEIRO\\app\\Back_end_barbearia_app\\Back_end_barbearia_app.csproj": {}
   },
   "projects": {
-    "C:\\Users\\OTAVIOCAETANORIBEIRO\\Back_end_barbearia_app\\Back_end_barbearia_app.csproj": {
+    "C:\\Users\\OTAVIOCAETANORIBEIRO\\app\\Back_end_barbearia_app\\Back_end_barbearia_app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\OTAVIOCAETANORIBEIRO\\Back_end_barbearia_app\\Back_end_barbearia_app.csproj",
+        "projectUniqueName": "C:\\Users\\OTAVIOCAETANORIBEIRO\\app\\Back_end_barbearia_app\\Back_end_barbearia_app.csproj",
         "projectName": "Back_end_barbearia_app",
-        "projectPath": "C:\\Users\\OTAVIOCAETANORIBEIRO\\Back_end_barbearia_app\\Back_end_barbearia_app.csproj",
+        "projectPath": "C:\\Users\\OTAVIOCAETANORIBEIRO\\app\\Back_end_barbearia_app\\Back_end_barbearia_app.csproj",
         "packagesPath": "C:\\Users\\OTAVIOCAETANORIBEIRO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\OTAVIOCAETANORIBEIRO\\Back_end_barbearia_app\\obj\\",
+        "outputPath": "C:\\Users\\OTAVIOCAETANORIBEIRO\\app\\Back_end_barbearia_app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

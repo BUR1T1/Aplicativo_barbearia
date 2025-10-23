@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rl6+Pwhw2BWgX38Mal18BYVKABJnjSuCZq9R6S/bqoIijjC+JwPSs/brsusWmAGWyovloPqbsFA45qTuCVEWpg==",
+  "dgSpecHash": "oDIA/e13J96mFQYdCm0C5xNS2aaYey9N31DyHMpMuUJzS/AOgw3I15QFTUI3nBfS+AKxGBbtIuxdFeaX/qlybw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\OTAVIOCAETANORIBEIRO\\Back_end_barbearia_app\\Back_end_barbearia_app.csproj",
+  "projectFilePath": "C:\\Users\\OTAVIOCAETANORIBEIRO\\app\\Back_end_barbearia_app\\Back_end_barbearia_app.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\OTAVIOCAETANORIBEIRO\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\OTAVIOCAETANORIBEIRO\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
