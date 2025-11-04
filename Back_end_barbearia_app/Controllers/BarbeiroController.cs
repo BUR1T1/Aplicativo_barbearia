@@ -17,9 +17,11 @@ namespace Back_end_barbearia_app.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Barbeiro>>> GetAll() =>
-            await _context.Barbeiros.ToListAsync();
+     [HttpGet]
+public async Task<ActionResult<IEnumerable<Barbeiro>>> GetBarbeiros()
+{
+    return await _context.Barbeiros.ToListAsync();
+}
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Barbeiro>> GetById(int id)
@@ -29,12 +31,13 @@ namespace Back_end_barbearia_app.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Barbeiro>> Create(Barbeiro b)
-        {
-            _context.Barbeiros.Add(b);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetById), new { id = b.Id }, b);
-        }
+public async Task<ActionResult<Barbeiro>> PostBarbeiro(Barbeiro barbeiro)
+{
+    _context.Barbeiros.Add(barbeiro);
+    await _context.SaveChangesAsync();
+
+    return CreatedAtAction(nameof(GetBarbeiros), new { id = barbeiro.Id }, barbeiro);
+}
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, Barbeiro b)

@@ -8,4 +8,6 @@ namespace Back_end_barbearia_app.Models
     public string Nome { get; set; }
     public string Telefone { get; set; }
 }
+
+
 }
