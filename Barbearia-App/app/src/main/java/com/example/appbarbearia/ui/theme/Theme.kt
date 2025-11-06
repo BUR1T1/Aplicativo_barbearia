@@ -1,70 +1,34 @@
 package com.example.appbarbearia.ui.theme
 
-import android.app.Activity
-import android.os.Build
-import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
-import androidx.compose.material3.lightColorScheme
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.SideEffect
-import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalView
-import androidx.core.view.WindowCompat
+import androidx.compose.ui.graphics.Color
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
-)
+// Paleta Laranja, Preto e Cinza (High Contrast)
 
-private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+// Cores Base
+val PrimaryOrange = Color(0xFFFF9800) // Laranja Vibrante (Primary)
+val PrimaryDark = Color(0xFFE65100)  // Laranja Escuro para variação
+val BackgroundBlack = Color(0xFF1C1C1C) // Fundo Preto Quase Total
+val SurfaceDark = Color(0xFF2C2C2C)    // Superfície Cinza Escura
+val TextWhite = Color(0xFFFFFFFF)      // Texto Branco
+val TextGray = Color(0xFFB0BEC5)      // Texto Cinza Claro (Secondary)
+val ErrorRed = Color(0xFFCF6679)     // Erro
 
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
-)
+// --- Tema Escuro (Foco no Preto e Laranja) ---
+val md_theme_dark_primary = PrimaryOrange
+val md_theme_dark_onPrimary = Color.Black // Texto sobre o laranja
+val md_theme_dark_secondary = TextGray
+val md_theme_dark_onSecondary = TextWhite
+val md_theme_dark_background = BackgroundBlack // Fundo principal
+val md_theme_dark_surface = SurfaceDark       // Cards e caixas
+val md_theme_dark_onSurface = TextWhite       // Texto sobre a surface
+val md_theme_dark_error = ErrorRed
 
-@Composable
-fun AppBarbeariaTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
-    content: @Composable () -> Unit
-) {
-    val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
-
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
-    }
-    val view = LocalView.current
-    if (!view.isInEditMode) {
-        SideEffect {
-            val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
-        }
-    }
-
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
-}
+// --- Tema Claro (Foco no Branco e Laranja, mantendo o contraste) ---
+val md_theme_light_primary = PrimaryDark
+val md_theme_light_onPrimary = Color.White
+val md_theme_light_secondary = Color(0xFF757575) // Cinza Escuro
+val md_theme_light_onSecondary = Color.Black
+val md_theme_light_background = Color.White // Fundo principal
+val md_theme_light_surface = Color.White
+val md_theme_light_onSurface = Color.Black
+val md_theme_light_error = Color(0xFFB00020)

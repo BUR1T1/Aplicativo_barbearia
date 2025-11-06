@@ -62,4 +62,11 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.4")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
 
+    implementation("androidx.compose.material3:material3:1.3.0")
+    implementation("androidx.compose.material3:material3-window-size-class:1.3.0")
+
+    implementation("androidx.compose.material:material-icons-extended:1.7.3")
+
+
+
 }

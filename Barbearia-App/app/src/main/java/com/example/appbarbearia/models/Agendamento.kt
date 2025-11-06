@@ -5,8 +5,11 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Agendamento(
     val id: Int? = null,
-    val clienteNome: String,
-    val servicoNome: String,
-    val data: String,
-    val hora: String
+    val clienteId: Int,
+    val barbeiroId: Int,
+    val servicoId: Int,
+    val dataHora: String,
+    val clienteNome: String? = null,
+    val barbeiroNome: String? = null,
+    val servicoNome: String? = null
 )

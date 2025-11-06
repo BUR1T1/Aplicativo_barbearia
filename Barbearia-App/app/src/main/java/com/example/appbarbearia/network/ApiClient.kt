@@ -9,7 +9,11 @@ import kotlinx.serialization.json.Json
 
 val client = HttpClient(Android) {
     install(ContentNegotiation) {
-        json(Json { ignoreUnknownKeys = true })
+        json(Json {
+            prettyPrint = true
+            isLenient = true
+            ignoreUnknownKeys = true
+        })
     }
 }
 

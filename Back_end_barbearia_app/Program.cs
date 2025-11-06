@@ -3,18 +3,16 @@ using Back_end_barbearia_app;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configura o SQLite com a conexão remota/local
+
 builder.Services.AddDbContext<BarberTechContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("RemoteConnection"))
 );
 
-// ✅ Permitir chamadas externas (como do emulador Android)
 builder.WebHost.ConfigureKestrel(options =>
 {
-    options.ListenAnyIP(5260); // Permite acesso via 10.0.2.2:5260
+    options.ListenAnyIP(5260); 
 });
 
-// ✅ CORS: libera acesso para o app Android (HTTP)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAndroidApp", policy =>
